@@ -1,24 +1,47 @@
-# README
+# Metrics Dashboard
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A web application to manage and visualize metrics using a Rails backend and a React frontend.
 
-Things you may want to cover:
+## Getting Started
 
-* Ruby version
+These instructions will help you get a copy of the project up and running on your local machine for development and testing purposes.
 
-* System dependencies
+### Prerequisites
 
-* Configuration
+- Docker
+- Docker Compose
+- Node.js (for local development)
+- Ruby (for local development)
 
-* Database creation
+### Installation
 
-* Database initialization
+1. **Clone the repository:**
 
-* How to run the test suite
+   git clone <repository-url>
+   cd metrics_app
 
-* Services (job queues, cache servers, search engines, etc.)
+2. **Build Docker containers and start the services::**
 
-* Deployment instructions
+   docker-compose build
+   docker-compose up
 
-* ...
+
+**Usage**
+
+  **Access the Dashboard:**
+   Open your web browser and navigate to http://localhost:3001. This will show the React frontend.
+
+   **API Endpoints:**
+
+      GET /api/metrics: Retrieve the list of metrics.
+      POST /api/metrics: Add a new metric to the database.
+
+   **Adding Metrics:**
+
+      Use the "Add Metric" button on the dashboard to add new metrics. Metrics should be visible in the "Metrics List" and visualized in the "Metric Averages" chart.
+
+**Troubleshooting**
+
+   Metrics not updating: Ensure the backend is running and accessible at http://localhost:3000.
+   
+   Data not showing in the dashboard: Check the console for errors and ensure that the API endpoint returns the expected data format.
