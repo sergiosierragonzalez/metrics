@@ -1,0 +1,22 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  username: postgres
+  password: password
+  host: db
+
+development:
+  <<: *default
+  database: metrics_development
+
+
+test:
+  <<: *default
+  database: metrics_test_db
+
+production:
+  <<: *default
+  database: metrics_production_db
+  username: metrics
+  password: <%= ENV['METRICS_DATABASE_PASSWORD'] %>

@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  timestamp: 2024-07-18 08:30:23
+  name: MyString
+  value: 1.5
+
+two:
+  timestamp: 2024-07-18 08:30:23
+  name: MyString
+  value: 1.5
